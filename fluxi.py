@@ -26,11 +26,11 @@ class Generate:
             guidance_scale = 3.5
             max_sequence_length = 512
         elif self.model_name == "black-forest-labs/FLUX.1-dev":
-            height = 768  # Different height for dev
-            width = 1360  # Different width for dev
-            num_inference_steps = 12  # More inference steps for dev
+            height = 1024  # Different height for dev
+            width = 1024  # Different width for dev
+            num_inference_steps = 32  # More inference steps for dev
             guidance_scale = 4.0  # Higher guidance scale for dev
-            max_sequence_length = 256  # Lower max sequence length for dev
+            max_sequence_length = 512  # Lower max sequence length for dev
 
         # Generate multiple images (3 in this case)
         images = self.pipe(
